@@ -48,3 +48,7 @@ nav .navbar-nav li a {
     padding-left: 10px;
   }
 }
+
+.text-shadow{
+  text-shadow: 1px 1px 1px #000;
+}
