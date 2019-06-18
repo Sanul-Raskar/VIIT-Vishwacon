@@ -26,7 +26,7 @@ nav .navbar-nav li a {
 
 .navbar-nav > li > .dropdown-menu {
   opacity: 1;
-  background-color: #000;
+  background-color: #231a60;
   color: #fff;
 }
 
@@ -37,7 +37,12 @@ nav .navbar-nav li a {
 
 .solid {
   opacity: 1;
-  background-color: rgba(51, 51, 51, 0.9) !important;
+  background: linear-gradient(
+    to right,
+    #231a60 0%,
+    #3c338d 51%,
+    #231a60 100%
+  ) !important;
 }
 
 .title {
