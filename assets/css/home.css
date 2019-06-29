@@ -7,6 +7,7 @@ body {
   padding: 0;
   background-color: "white";
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 nav .navbar-nav li a {
@@ -292,4 +293,25 @@ nav .navbar-nav li a {
     transform: translateY(15px);
     opacity: 0;
   }
+}
+
+.topButton {
+  display: none;
+  position: fixed;
+  right: 12px;
+  bottom: 90px;
+  color: #fff;
+  margin-top: 12px;
+  z-index: 100;
+  opacity: 0.8;
+  background-color: #222222;
+}
+
+.topButton:hover {
+  color: white;
+  opacity: 1;
+}
+
+.buttonDisplay {
+  display: block;
 }
