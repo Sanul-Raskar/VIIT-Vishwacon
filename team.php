@@ -1,10 +1,22 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "vishwacon1";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Contact Us</title>
+    <title>Our Team</title>
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -37,11 +49,15 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/sal.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="/" style="color:#fff">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="opacity: 1;background: linear-gradient(to right,
+    #231a60 0%,
+    #3c338d 51%,
+    #231a60 100%
+  ) !important;">
+      <a class="navbar-brand" href="index.html" style="color:#fff">
         <img
           src="./assets/img/cropped-vishwacon19-1.jpg"
-          width="40"
+          width="50"
           height="40"
           class="d-inline-block align-top"
           style="margin-right:10px"
@@ -88,119 +104,136 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="registration.html">Registration</a>
+            <a class="nav-link" href="#">Registration</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="team.php">Our Team</a>
+            <a class="nav-link" href="#">Our Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="contactUs.html">Contact Us</a>
           </li>
         </ul>
       </div>
     </nav>
-
-    <section
-      style="height: 350px;background:linear-gradient(90deg,rgba(0, 0, 0,0.7),rgba(60, 51, 141,0.5)),url('./assets/img/contactUs.webp'); background-size: cover;
-    line-height: 350px;
-    text-align: center;"
-    >
-      <h1 style="color:white;line-height: 350px;text-align: center;">
-        Contact Us
-      </h1>
-    </section>
-    <br /><br />
+    <div style="height:100px"></div>
     <div class="container">
+      <h1 class="text-center">Chief Patron</h1>
+      <br />
       <div class="row">
-        <div class="col-sm-6 px-5">
-          <h5 style="font-weight: bold">
-            <i class="fas fa-envelope"></i> &nbsp;Email
-          </h5>
-          <h6>abc@gmail.com</h6>
-          <br />
-          <h5 style="font-weight: bold">
-            <i class="fas fa-mobile-alt"></i>&nbsp; Mobile
-          </h5>
-          <h6>+91 1234567890</h6>
-          <br />
-          <h5 style="font-weight: bold">
-            <i class="fas fa-map-marked-alt"></i>&nbsp; Address
-          </h5>
-          <h6>Vishwakarma Institute of Information Technology</h6>
-          <h6>666, Kapil Nagar, Kondhwa Budruk, Pune, Maharashtra 411048</h6>
+      <?php
+		$sql="SELECT * FROM chief_patron";
+		$result_set=mysqli_query($conn,$sql);
+		while ($row=mysqli_fetch_array($result_set)) {
+        ?>
+        <div class="col-6 col-sm-4 mx-auto text-center my-3">
+          <img
+            src="https://miro.medium.com/max/478/1*KK8Sz-PVylkQKBaIXhjYWA.jpeg"
+            alt=""
+            class="teamImg"
+          />
+          <br /><br />
+          <h4><?php echo $row['name'] ?></h4>
+            <h5><?php echo $row['position'] ?></h5>
+             <h6><?php echo $row['organisation'] ?></h6>
         </div>
-
-        <div class="col-sm-6 px-5">
-          <form action="">
-            <div class="form-group">
-              <label for="Name"><i class="fas fa-user"></i>&nbsp; Name</label>
-              <input
-                id="Name"
-                class="form-control"
-                type="text"
-                placeholder="Enter Name"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="Email"
-                ><i class="fas fa-envelope"></i>&nbsp; Email</label
-              >
-              <input
-                id="Email"
-                class="form-control"
-                type="email"
-                placeholder="Enter Email"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="message"
-                ><i class="fas fa-comment-alt"></i> &nbsp; Message</label
-              >
-              <textarea
-                name="message"
-                class="form-control"
-                id="message"
-                cols="20"
-                rows="3"
-                placeholder="Enter Message"
-                required
-              ></textarea>
-            </div>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary">
-                <i class="fas fa-paper-plane"></i> &nbsp;Submit
-              </button>
-            </div>
-          </form>
+         <?php 
+        }
+        ?>
         </div>
       </div>
-      <br /><br />
+<br> <br>
+      <div class="container">
+      <h1 class="text-center">Patron</h1>
+      <br />
       <div class="row">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.547728913904!2d73.88170511426706!3d18.458832975878554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eaf464e54ea1%3A0x7a44fac41643ec63!2sVishwakarma+Institute+of+Information+Technology!5e0!3m2!1sen!2sin!4v1561743164978!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          frameborder="0"
-          style="border:0"
-          allowfullscreen
-        ></iframe>
+      <?php
+		$sql="SELECT * FROM patron";
+		$result_set=mysqli_query($conn,$sql);
+		while ($row=mysqli_fetch_array($result_set)) {
+        ?>
+        <div class="col-6 col-sm-4 mx-auto text-center my-3">
+          <img
+            src="https://miro.medium.com/max/478/1*KK8Sz-PVylkQKBaIXhjYWA.jpeg"
+            alt=""
+            class="teamImg"
+          />
+          <br /><br />
+          <h4><?php echo $row['name'] ?></h4>
+            <h5><?php echo $row['position'] ?></h5>
+             <h6><?php echo $row['organisation'] ?></h6>
+        </div>
+         <?php 
+        }
+        ?>
+        </div>
+      </div>
+<br><br>
+      <div class="container">
+        <h1 class="text-center">Advisory Committee</h1>
+        <div class="row">
+        <?php
+		$sql="SELECT * FROM advisory_committee";
+		$result_set=mysqli_query($conn,$sql);
+		while ($row=mysqli_fetch_array($result_set)) {
+        ?>
+        
+        <div class="col-6 col-sm-3 mx-auto text-center my-3">
+            <img
+              src="https://miro.medium.com/max/478/1*KK8Sz-PVylkQKBaIXhjYWA.jpeg"
+              alt=""
+              class="teamImg"
+            />
+            <br /><br />
+            <h4><?php echo $row['name'] ?></h4>
+            <h5><?php echo $row['position'] ?></h5>
+             <h6><?php echo $row['organisation'] ?></h6>
+          </div>
+        <?php 
+        }
+        ?>
+         </div> 
+      </div>
+      <!--container-->
+    </div>
+
+<br><br>
+<div class="container">
+        <h1 class="text-center"> Organizers</h1>
+        <div class="row">
+        <?php
+		$sql="SELECT * FROM organiser";
+		$result_set=mysqli_query($conn,$sql);
+		while ($row=mysqli_fetch_array($result_set)) {
+        ?>
+        
+        <div class="col-6 col-sm-3 mx-auto text-center my-3">
+            <img
+              src="https://miro.medium.com/max/478/1*KK8Sz-PVylkQKBaIXhjYWA.jpeg"
+              alt=""
+              class="teamImg"
+            />
+            <br /><br />
+            <h4><?php echo $row['name'] ?></h4>
+            <h5><?php echo $row['position'] ?></h5>
+             <h6><?php echo $row['organisation'] ?></h6>
+          </div>
+        <?php 
+        }
+        ?>
+         </div> 
       </div>
     </div>
+
+
     <div style="height: 50px"></div>
     <button class="btn topButton" onclick="goToTop()">
       <i class="fas fa-arrow-up"></i>
     </button>
-    <footer
-      class="page-footer font-small"
-      style="background: linear-gradient(to right, #231a60 0%, #3c338d 51%, #231a60 100%);"
-    >
+    <footer class="page-footer font-small"
+      style="background: linear-gradient(to right, #231a60 0%, #3c338d 51%, #231a60 100%);">
       <div class="container">
         <div class="row">
           <div class="col-md-12 py-4 text-white text-center">
@@ -248,7 +281,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="./assets/js/sal.js"></script>
     <script type="text/javascript" src="./assets/js/home.js"></script>
   </body>
