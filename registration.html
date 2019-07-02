@@ -88,7 +88,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Registration</a>
+            <a class="nav-link" href="registration.html">Registration</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="team.php">Our Team</a>
@@ -116,19 +116,16 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-5 mx-auto">
-          <form
-            action="register.php"
-            method="post"
-            enctype="multipart/form-data"
-          >
+          <form action="register.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="firstName">First Name</label>
               <input
-                name="fname"
+              	name="fname"
                 type="text"
                 id="firstName"
                 class="form-control"
                 placeholder="Enter first name"
+                pattern="[a-zA-Z]"
                 required
               />
             </div>
@@ -136,11 +133,12 @@
             <div class="form-group">
               <label for="lastName">Last Name</label>
               <input
-                name="lname"
+              name="lname"
                 type="text"
                 id="lastName"
                 class="form-control"
                 placeholder="Enter last name"
+                pattern="[a-zA-Z]"
                 required
               />
             </div>
@@ -148,11 +146,11 @@
             <div class="form-group">
               <label for="email">Email</label>
               <input
-                name="email"
+             	name="email"
                 type="email"
                 id="email"
                 class="form-control"
-                placeholder="Enter first name"
+                placeholder="Enter email"
                 required
               />
             </div>
@@ -160,12 +158,12 @@
             <div class="form-group">
               <label for="mobile">Mobile</label>
               <input
-                name="mobile"
+              	name="mobile"
                 type="tel"
                 id="mobile"
                 class="form-control"
                 placeholder="Enter mobile number"
-                pattern="[0-9]{10}"
+                pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
                 required
               />
             </div>
@@ -173,7 +171,7 @@
             <div class="form-group">
               <label for="college">College</label>
               <input
-                name="college"
+             	name="college"
                 type="text"
                 id="college"
                 class="form-control"
@@ -184,11 +182,7 @@
 
             <div class="form-group">
               <label for="exampleFormControlSelect1">College Year</label>
-              <select
-                class="form-control"
-                id="exampleFormControlSelect1"
-                name="year"
-              >
+              <select class="form-control" id="exampleFormControlSelect1" name="year">
                 <option>FE</option>
                 <option>SE</option>
                 <option>TE</option>
@@ -199,7 +193,7 @@
             <div class="form-group">
               <label for="paper">Research Paper Name</label>
               <input
-                name="topic"
+              name="topic"
                 type="text"
                 id="paper"
                 class="form-control"
@@ -218,7 +212,7 @@
               </div>
               <div class="custom-file">
                 <input
-                  name="pdf"
+                name="pdf"
                   type="file"
                   class="custom-file-input"
                   id="inputGroupFile01"
@@ -232,9 +226,7 @@
 
             <br />
             <div class="text-right">
-              <button type="submit" class="btn btn-primary" name="btn_submit">
-                Submit
-              </button>
+              <button type="submit" class="btn btn-primary" name="btn_submit">Submit</button>
             </div>
           </form>
         </div>

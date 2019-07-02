@@ -38,7 +38,7 @@ if(isset($_POST['btn_submit'])){
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
-		header("Location: view.php");
+		header("Location: registration.html");
 		}
  	}
 }
