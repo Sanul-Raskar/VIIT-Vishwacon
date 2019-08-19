@@ -37,15 +37,15 @@
   position: relative;
   padding: 70px 0px 73px 70px;
 }
-.section_content h6 {
+.section_content h2 {
   color: #fff;
-  font-size: 14px;
+  font-size: 24px;
   margin-bottom: 12px;
   position: relative;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.section_content h6:after {
+.section_content h2:after {
   content: "";
   position: absolute;
   background: -webkit-linear-gradient(to right, #3fcaff 0%, #a4ffb0 100%);
