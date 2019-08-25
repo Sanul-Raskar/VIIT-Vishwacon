@@ -22,53 +22,20 @@ function goToTop() {
   document.documentElement.scrollTop = 0;
 }
 
-/* Chart */
-var options = {
-  chart: {
-    height: 350,
-    type: "line",
-    zoom: {
-      enabled: false
-    }
-  },
-  dataLabels: {
-    enabled: true
-  },
-  stroke: {
-    curve: "straight"
-  },
-  series: [
-    {
-      name: "Algorithms",
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148, 150]
-    }
-  ],
-  title: {
-    text: "Some Information Graph on AI",
-    align: "left"
-  },
-  grid: {
-    row: {
-      colors: ["#f3f3f3", "transparent"],
-      opacity: 0.5
-    }
-  },
-  xaxis: {
-    categories: [
-      "2010",
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2016",
-      "2017",
-      "2018",
-      "2019"
-    ]
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  nav:true,
+  margin:10,
+  responsiveClass:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:2
+      },
+      1000:{
+          items:3
+      }
   }
-};
-
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
-/* chart  */
+})
