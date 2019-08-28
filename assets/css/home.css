@@ -343,3 +343,16 @@ nav .navbar-nav li a {
   color: #231a60;
   border-color: #231a60;
 }
+
+.buttonTheme {
+  background-color: #231a60;
+  color: white;
+  border-color: #231a60;
+  border-width: 1.5px;
+}
+.buttonTheme:hover {
+  background-color: white;
+  color: #231a60;
+  border-color: #231a60;
+  border-width: 1.5px;
+}
