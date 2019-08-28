@@ -345,14 +345,14 @@ nav .navbar-nav li a {
 }
 
 .buttonTheme {
-  background-color: #231a60;
+  background-color: #4331b4;
   color: white;
-  border-color: #231a60;
+  border-color: #4331b4;
   border-width: 1.5px;
 }
 .buttonTheme:hover {
   background-color: white;
-  color: #231a60;
-  border-color: #231a60;
+  color: #4331b4;
+  border-color: #4331b4;
   border-width: 1.5px;
 }
