@@ -331,3 +331,14 @@ nav .navbar-nav li a {
   box-shadow: 20px 10px 20px 4px #e6e6e6;
   height: 200px;
 }
+
+.button {
+  color: white;
+  border-color: white;
+}
+
+.button:hover {
+  background-color: white;
+  color: #231a60;
+  border-color: #231a60;
+}
