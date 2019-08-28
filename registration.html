@@ -93,8 +93,8 @@
             <a class="nav-link" href="registration.html">Registration</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="advisory.html">Advisory Committee</a>
-            </li>
+            <a class="nav-link" href="advisory.html">Advisory Committee</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="ourTeam.html">Our Team</a>
           </li>
@@ -117,123 +117,176 @@
     <br /><br />
     <div class="container">
       <div class="row">
-        <div class="col-sm-5 mx-auto">
-          <form action="register.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="firstName">First Name</label>
-              <input
-              	name="fname"
-                type="text"
-                id="firstName"
-                class="form-control"
-                placeholder="Enter first name"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="lastName">Last Name</label>
-              <input
-              name="lname"
-                type="text"
-                id="lastName"
-                class="form-control"
-                placeholder="Enter last name"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-             	name="email"
-                type="email"
-                id="email"
-                class="form-control"
-                placeholder="Enter email"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="mobile">Mobile</label>
-              <input
-              	name="mobile"
-                type="tel"
-                id="mobile"
-                class="form-control"
-                placeholder="Enter mobile number"
-                pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="college">College</label>
-              <input
-             	name="college"
-                type="text"
-                id="college"
-                class="form-control"
-                placeholder="Enter college name"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">College Year</label>
-              <select class="form-control" id="exampleFormControlSelect1" name="year">
-                <option>FE</option>
-                <option>SE</option>
-                <option>TE</option>
-                <option>BE</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="paper">Research Paper Name</label>
-              <input
-              name="topic"
-                type="text"
-                id="paper"
-                class="form-control"
-                placeholder="Enter research paper name"
-                required
-              />
-            </div>
-
-            Upload PDF version of Research Paper
-
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupFileAddon01"
-                  >Upload</span
-                >
+        <div class="col-sm-10 mx-auto">
+          <form
+            action="register.php"
+            method="post"
+            enctype="multipart/form-data"
+          >
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input
+                    name="fname"
+                    type="text"
+                    id="firstName"
+                    class="form-control"
+                    placeholder="Enter first name"
+                    required
+                  />
+                </div>
               </div>
-              <div class="custom-file">
-                <input
-                name="pdf"
-                  type="file"
-                  class="custom-file-input"
-                  id="inputGroupFile01"
-                  aria-describedby="inputGroupFileAddon01"
-                />
-                <label class="custom-file-label" for="inputGroupFile01"
-                  >Choose file</label
-                >
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    name="lname"
+                    type="text"
+                    id="lastName"
+                    class="form-control"
+                    placeholder="Enter last name"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="mobile">Mobile</label>
+                  <input
+                    name="mobile"
+                    type="tel"
+                    id="mobile"
+                    class="form-control"
+                    placeholder="Enter mobile number"
+                    pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="college">College</label>
+                  <input
+                    name="college"
+                    type="text"
+                    id="college"
+                    class="form-control"
+                    placeholder="Enter college name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">College Year</label>
+                  <select
+                    class="form-control"
+                    id="exampleFormControlSelect1"
+                    name="year"
+                  >
+                    <option>FE</option>
+                    <option>SE</option>
+                    <option>TE</option>
+                    <option>BE</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="paper">Research Paper Name</label>
+                  <input
+                    name="topic"
+                    type="text"
+                    id="paper"
+                    class="form-control"
+                    placeholder="Enter research paper name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                Upload PDF version of Research Paper
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01"
+                      >Upload</span
+                    >
+                  </div>
+                  <div class="custom-file">
+                    <input
+                      name="pdf"
+                      type="file"
+                      class="custom-file-input"
+                      id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01"
+                    />
+                    <label class="custom-file-label" for="inputGroupFile01"
+                      >Choose file</label
+                    >
+                  </div>
+                </div>
               </div>
             </div>
 
             <br />
             <div class="text-right">
-              <button type="submit" class="btn btn-primary" name="btn_submit">Submit</button>
+              <button type="submit" class="btn btn-primary" name="btn_submit">
+                Submit
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <br />
+    <hr />
+    <br />
+    <section>
+      <div class="container">
+        <h3 class="text-center">Author Information</h3>
+        <ul>
+          <li>
+            All submissions will be considered for publication in International
+            Journals with DOI numbers.
+          </li>
+          <li>
+            Selected papers will be published in Scopus Indexed Journals with an
+            additional fees of ₹8500.
+          </li>
+          <li>
+            Authors who required publication in Scopus Indexed Journals will be
+            charged additionally based on journal selection. Authors can contact
+            the organizing team for additional information of Scopus paper
+            submisssions. Journal for Scopus- IJITEE, IJRTE, IJEAT, ASTESJ
+          </li>
+        </ul>
+      </div>
+    </section>
     <br /><br />
-
     <section
       style="background:linear-gradient(90deg,rgb(35, 26, 96),rgb(60, 51, 141));"
     >
