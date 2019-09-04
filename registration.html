@@ -122,6 +122,7 @@
             action="register.php"
             method="post"
             enctype="multipart/form-data"
+            onsubmit="return validate()"
           >
             <div class="row">
               <div class="col-sm-6">
@@ -136,6 +137,12 @@
                     required
                   />
                 </div>
+                <div class="fnameError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="fnameError"></span>
+                  </p>
+                </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
@@ -148,6 +155,12 @@
                     placeholder="Enter last name"
                     required
                   />
+                </div>
+                <div class="lnameError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="lnameError"></span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -164,6 +177,12 @@
                     required
                   />
                 </div>
+                <div class="emailError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="emailError"></span>
+                  </p>
+                </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
@@ -177,6 +196,12 @@
                     pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
                     required
                   />
+                </div>
+                <div class="mobileError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="mobileError"></span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -193,13 +218,19 @@
                     required
                   />
                 </div>
+                <div class="collegeError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="collegeError"></span>
+                  </p>
+                </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">College Year</label>
                   <select
                     class="form-control"
-                    id="exampleFormControlSelect1"
+                    id="year"
                     name="year"
                   >
                     <option>FE</option>
@@ -207,6 +238,12 @@
                     <option>TE</option>
                     <option>BE</option>
                   </select>
+                </div>
+                <div class="yearError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="yearError"></span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -233,6 +270,12 @@
                     >
                   </select>
                 </div>
+                <div class="branchError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="branchError"></span>
+                  </p>
+                </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
@@ -240,6 +283,12 @@
                   <select class="form-control" id="domain" name="domain">
                     <option value="">Please select Branch first</option>
                   </select>
+                </div>
+                <div class="domainError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="domainError"></span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -257,11 +306,16 @@
                     required
                   />
                 </div>
+                <div class="paperError">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="paperError"></span>
+                  </p>
+                </div>
               </div>
               <div class="col-sm-6">
                 Upload PDF version of Research Paper
-
-                <div class="input-group">
+                <div class="input-group mt-2">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="inputGroupFileAddon01"
                       >Upload</span
@@ -272,13 +326,19 @@
                       name="pdf"
                       type="file"
                       class="custom-file-input"
-                      id="inputGroupFile01"
+                      id="file"
                       aria-describedby="inputGroupFileAddon01"
                     />
                     <label class="custom-file-label" for="inputGroupFile01"
                       >Choose file</label
                     >
                   </div>
+                </div>
+                <div class="fileError mt-2">
+                  <p class="error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span id="fileError"></span>
+                  </p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
-console.log("JS Connected");
 sal();
+
 $(document).ready(function() {
   $(window).scroll(function() {
     if ($(this).scrollTop() > 300) {
@@ -129,5 +129,91 @@ function dynamicDropdown(selected) {
         );
       }
       break;
+  }
+}
+
+let fnameError = document.querySelector(".fnameError"),
+  fnameMessage = document.querySelector("#fnameError"),
+  lnameError = document.querySelector(".lnameError"),
+  lnameMessage = document.querySelector("#lnameError"),
+  emailError = document.querySelector(".emailError"),
+  emailMessage = document.querySelector("#emailError"),
+  mobileError = document.querySelector(".mobileError"),
+  mobileMessage = document.querySelector("#mobileError"),
+  collegeError = document.querySelector(".collegeError"),
+  collegeMessage = document.querySelector("#collegeError"),
+  yearError = document.querySelector(".yearError"),
+  yearMessage = document.querySelector("#yearError"),
+  domainError = document.querySelector(".domainError"),
+  domainMessage = document.querySelector("#domainError"),
+  paperError = document.querySelector(".paperError"),
+  paperMessage = document.querySelector("#paperError"),
+  fileError = document.querySelector(".fileError"),
+  fileMessage = document.querySelector("#fileError");
+
+function hideError() {
+  fnameError.style.display = "none";
+  lnameError.style.display = "none";
+  emailError.style.display = "none";
+  mobileError.style.display = "none";
+  collegeError.style.display = "none";
+  yearError.style.display = "none";
+  domainError.style.display = "none";
+  paperError.style.display = "none";
+  fileError.style.display = "none";
+}
+
+function validate() {
+  let fname = document.querySelector("#firstName").value,
+    lname = document.querySelector("#lastName").value,
+    email = document.querySelector("#email").value,
+    mobile = document.querySelector("#mobile").value,
+    college = document.querySelector("#college").value,
+    year = document.querySelector("#year").value,
+    branch = document.querySelector("#branch").value,
+    domain = document.querySelector("#domain").value;
+
+  let fnameFlag,
+    lnameFlag,
+    emailFlag,
+    mobileFlag,
+    collegeFlag,
+    yearFlag,
+    branchFlag,
+    domainFlag;
+
+  if (fname === "") {
+    fnameError.style.display = "block";
+    fnameMessage.innerHTML = "Required";
+    fnameFlag = false;
+  } else {
+    fnameError.style.display = "none";
+    fnameMessage.innerHTML = "";
+    fnameFlag = true;
+  }
+
+  if (lname === "") {
+    lnameError.style.display = "block";
+    lnameMessage.innerHTML = "Required";
+    lnameFlag = false;
+  } else {
+    lnameError.style.display = "none";
+    lnameMessage.innerHTML = "";
+    lnameFlag = true;
+  }
+
+  if (
+    fnameFlag &&
+    lnameFlag &&
+    emailFlag &&
+    mobileFlag &&
+    collegeFlag &&
+    yearFlag &&
+    branchFlag &&
+    domainFlag
+  ) {
+    return true;
+  } else {
+    return false;
   }
 }
