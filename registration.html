@@ -214,72 +214,31 @@
             <div class="row">
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Branch</label>
+                  <label for="branch">Branch</label>
                   <select
                     class="form-control"
-                    id="exampleFormControlSelect1"
-                    name="year"
+                    id="branch"
+                    name="branch"
+                    onchange="dynamicDropdown(this.value);"
                   >
-                    <option>Computer Science and Engineering</option>
-                    <option>Civil Engineering</option>
-                    <option>Mechanical Engineering</option>
-                    <option>Information Technology</option>
-                    <option>Electronics & Telecommunication Engineering</option>
+                    <option value="">Select Branch</option>
+                    <option value="comp">
+                      Computer Science and Engineering</option
+                    >
+                    <option value="civil">Civil Engineering</option>
+                    <option value="mech">Mechanical Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="entc"
+                      >Electronics & Telecommunication Engineering</option
+                    >
                   </select>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Paper Domain</label>
-                  <select
-                    class="form-control"
-                    id="exampleFormControlSelect1"
-                    name="year"
-                  >
-                    <!--  computer -->
-                    <option>Data Science</option>
-                    <option>Internet Of Things</option>
-                    <option>Software Engineering</option>
-                    <option>Networking & Cloud Computing</option>
-                    <option>Artificial Intelligence & Machine Learning</option>
-
-                    <!-- civil -->
-                    <option>
-                      Green Construction Materials & Advances in Construction
-                      Techniques
-                    </option>
-                    <option>
-                      Recent Developments in Town Planning with respect to Smart
-                      City
-                    </option>
-                    <option>
-                      Recent Trends in Structural Engineering and Concrete
-                      Technology
-                    </option>
-                    <option>
-                      Application of Remote Sensing and GIS in Civil Engineering
-                    </option>
-                    <option>
-                      New Technologies, Methods & Techniques in Civil
-                      Engineering
-                    </option>
-                    <!-- mechanical -->
-                    <option>Automation & Robotics</option>
-                    <option>Design Engineering</option>
-                    <option>Thermal & Fluid Science</option>
-                    <option>Manufacturing & Material Science</option>
-                    <option>Mechatronics</option>
-                    <!-- it -->
-                    <option>Cloud Computing</option>
-                    <option>Data Mining & Information Retrieval</option>
-                    <option>Mobile Computing & Wireless Communication</option>
-                    <option>Network & Cyber Security</option>
-                    <!-- entc -->
-                    <option>Embedded & VLSI Design</option>
-                    <option>Communication & Networking</option>
-                    <option>Machine Learning</option>
-                    <option>Instrumentation Systems</option>
-                    <option>Power & Renewable Energy Systems</option>
+                  <select class="form-control" id="domain" name="domain">
+                    <option value="">Please select Branch first</option>
                   </select>
                 </div>
               </div>
