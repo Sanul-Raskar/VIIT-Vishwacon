@@ -166,7 +166,9 @@
   width: 100%;
 }
 .imageSpacing {
-  margin-left: 20px;
+  width: 300px;
+  height: auto;
+  margin: 30px 120px 0px 120px;
 }
 
 /* Start Pages Area css
@@ -295,10 +297,10 @@
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-  .imageSpacing {
+  /* .imageSpacing {
     margin-top: 20px;
     margin-left: 0;
-  }
+  } */
   .section_gap {
     padding: 70px 0;
   }
@@ -348,10 +350,10 @@
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .imageSpacing {
+  /*  .imageSpacing {
     margin-top: 20px;
     margin-left: 0;
-  }
+  } */
 
   .primary_btn {
     line-height: 40px;
