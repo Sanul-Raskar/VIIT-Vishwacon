@@ -165,7 +165,7 @@
   height: 100%;
   width: 100%;
 }
-.imageSpacing{
+.imageSpacing {
   margin-left: 20px;
 }
 
@@ -295,7 +295,7 @@
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
-  .imageSpacing{
+  .imageSpacing {
     margin-top: 20px;
     margin-left: 0;
   }
@@ -348,7 +348,7 @@
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .imageSpacing{
+  .imageSpacing {
     margin-top: 20px;
     margin-left: 0;
   }
@@ -366,7 +366,7 @@
   }
 
   .section_content {
-    padding: 35px 10px 35px 35px !important;
+    padding: 35px 10px 35px 10px !important;
   }
   .section_content h1 {
     line-height: 30px;
@@ -375,6 +375,8 @@
   }
   .section_content p {
     padding-bottom: 30px;
+    padding-right: 2px;
+    padding-left: 2px;
   }
 
   .main_title {
