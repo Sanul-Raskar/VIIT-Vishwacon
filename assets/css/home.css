@@ -51,6 +51,12 @@ nav .navbar-nav li a {
   margin-top: 14%;
 }
 
+.banner {
+  line-height: 340px;
+  text-align: center;
+  height: 340px;
+}
+
 @media only screen and (max-width: 800px) {
   .navbar {
     background: linear-gradient(
@@ -65,6 +71,12 @@ nav .navbar-nav li a {
   }
   .title {
     margin-top: 22%;
+  }
+
+  .banner {
+    line-height: 300px;
+    text-align: center;
+    height: 300px;
   }
 }
 
