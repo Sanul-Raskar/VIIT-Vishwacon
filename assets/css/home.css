@@ -53,7 +53,12 @@ nav .navbar-nav li a {
 
 @media only screen and (max-width: 800px) {
   .navbar {
-    background-color: rgba(51, 51, 51, 0.9) !important;
+    background: linear-gradient(
+      to right,
+      #231a60 0%,
+      #3c338d 51%,
+      #231a60 100%
+    ) !important;
   }
   .nav.navbar-nav li a {
     padding-left: 10px;
@@ -262,6 +267,7 @@ nav .navbar-nav li a {
   z-index: 10;
   width: 34px;
   height: 55px;
+  display: block;
 }
 .mousey {
   width: 3px;
@@ -357,47 +363,53 @@ nav .navbar-nav li a {
   border-width: 1.5px;
 }
 
-.error{
+.error {
   font-size: 15px;
   color: red;
 }
 
-.fnameError{
+.fnameError {
   display: none;
 }
 
-.lnameError{
+.lnameError {
   display: none;
 }
 
-.emailError{
+.emailError {
   display: none;
 }
 
-.mobileError{
+.mobileError {
   display: none;
 }
 
-.collegeError{
+.collegeError {
   display: none;
 }
 
-.yearError{
+.yearError {
   display: none;
 }
 
-.branchError{
+.branchError {
   display: none;
 }
 
-.domainError{
+.domainError {
   display: none;
 }
 
-.paperError{
+.paperError {
   display: none;
 }
 
-.fileError{
+.fileError {
   display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .scroll-downs {
+    display: none;
+  }
 }
