@@ -23,10 +23,15 @@ function goToTop() {
 }
 
 $(".owl-carousel").owlCarousel({
+  dots: false,
   loop: true,
   nav: true,
   margin: 10,
   responsiveClass: true,
+  autoHeight:true,
+  autoplay:true,
+  autoplayTimeout:3000,
+  autoplayHoverPause:true,
   responsive: {
     0: {
       items: 1
