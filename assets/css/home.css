@@ -457,3 +457,9 @@ nav .navbar-nav li a {
     display: none;
   }
 }
+
+.teamImg{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
