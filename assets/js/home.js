@@ -28,7 +28,6 @@ $(".owl-carousel").owlCarousel({
   nav: true,
   margin: 10,
   responsiveClass: true,
-  autoHeight:true,
   autoplay:true,
   autoplayTimeout:3000,
   autoplayHoverPause:true,
