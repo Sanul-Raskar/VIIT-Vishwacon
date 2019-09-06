@@ -463,3 +463,11 @@ nav .navbar-nav li a {
   height: 100px;
   width: 100px;
 }
+
+.galleryImg{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 4px;
+}
+

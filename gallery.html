@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#231a60b3">
+    <meta name="theme-color" content="#231a60b3" />
 
-    <title>Gallery |  Vishwa 2019</title>
+    <title>Gallery | Vishwa 2019</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -33,7 +33,16 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/owl.theme.default.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="./assets/css/home.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/sal.css" />
@@ -47,7 +56,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <a class="navbar-brand" href="index.html" style="color:#fff">
-       <!--  <img
+        <!--  <img
           src="./assets/img/logo.webp"
           width="40"
           height="40"
@@ -76,8 +85,8 @@
               >Home <span class="sr-only">(current)</span></a
             >
           </li>
-          
-         <!--  <li class="nav-item">
+
+          <!--  <li class="nav-item">
             <a class="nav-link" href="registration.html">Registration</a>
           </li> -->
           <li class="nav-item">
@@ -87,9 +96,9 @@
             <a class="nav-link" href="ourTeam.html">Our Team</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="contactUs.html">Contact Us</a>
           </li>
@@ -98,15 +107,81 @@
     </nav>
 
     <section
-    class="banner"
+      class="banner"
       style="background:linear-gradient(90deg,rgba(0, 0, 0,0.7),rgba(60, 51, 141,0.5)),url('./assets/img/contactUs.webp'); background-size: cover;"
     >
       <h1 style="color:white;line-height: 350px;text-align: center;">
-       Gallery
+        Gallery
       </h1>
     </section>
     <br /><br />
-    
+
+    <section>
+      <div class="container text-center">
+        <div class="owl-carousel owl-theme">
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Chief_Guest-Mr._A_S_Deshpande.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Chief Guest - Mr. A. S. Deshpande</p>
+          </div>
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Inaguration.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Chief Inaguration</p>
+          </div>
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Paper_Presentation-Civil_Dept.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Paper Presentation Civil Department</p>
+          </div>
+
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Paper_Presentation-Comp_Dept.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Paper Presentation Computer Department</p>
+          </div>
+
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Paper_Presentation-E&TC_Dept.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Paper Presentation E&TC Department</p>
+          </div>
+
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Paper_Presentation-Mech_Dept.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Paper Presentation Mechanical Department</p>
+          </div>
+
+          <div class="ml-2 mr-2">
+            <img
+              src="./assets/img/gallery/VISHWACON_2019_Paper_Presentation.JPG"
+              alt=""
+              class="galleryImg"
+            />
+            <p>Paper Presentation</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <div style="height: 50px"></div>
     <button class="btn topButton" onclick="goToTop()">
       <i class="fas fa-arrow-up"></i>
@@ -161,6 +236,10 @@
         <a href="#" style="color:white"> vishwacon.com</a>
       </div>
     </footer>
+    <script
+      type="text/javascript"
+      src="./assets/js/owl.carousel.min.js"
+    ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="./assets/js/sal.js"></script>
