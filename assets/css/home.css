@@ -119,6 +119,8 @@ nav .navbar-nav li a {
 .card {
   width: 300px;
   margin-top: 10px;
+  height: 220px;
+  background: linear-gradient(45deg, #ffffff 0%, #f2f2f2 51%, #e6e6e6 100%);
 }
 
 .timeline {
@@ -458,16 +460,15 @@ nav .navbar-nav li a {
   }
 }
 
-.teamImg{
+.teamImg {
   border-radius: 50%;
   height: 100px;
   width: 100px;
 }
 
-.galleryImg{
+.galleryImg {
   width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 4px;
 }
-
