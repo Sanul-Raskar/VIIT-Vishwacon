@@ -166,9 +166,13 @@
   width: 100%;
 }
 .imageSpacing {
-  width: 300px;
+  width: 400px;
   height: auto;
-  margin: 30px 120px 0px 120px;
+  /* margin: 30px 70px 0px 70px; */
+  /* padding-top: 30px; */
+  margin-top: 30px;
+  margin-left: auto;
+    margin-right: auto;
   border-radius: 10px;
 }
 
@@ -262,6 +266,7 @@
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .imageSpacing {
+    width: 300px;
     margin: 30px 35px 20px 35px;
   }
 
@@ -303,6 +308,7 @@
 }
 @media only screen and (min-width: 481px) and (max-width: 767px) {
   .imageSpacing {
+    width: 400px;
     margin: 30px 22px 20px 22px;
   }
 
@@ -356,7 +362,8 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .imageSpacing {
-    margin: 30px 22px 20px 22px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .primary_btn {
