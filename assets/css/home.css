@@ -40,7 +40,7 @@ nav .navbar-nav li a {
 }
 
 .solid {
-  opacity: 1;
+  opacity: 0.97;
   background: linear-gradient(
     to right,
     #231a60 0%,
