@@ -1,0 +1,142 @@
+.docConclaveBanner {
+  background: url("../img/bg-doctoralConclave.jpg");
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.docCon {
+  letter-spacing: 6px;
+  position: relative;
+  top: 9rem;
+  font-size: 3rem;
+}
+
+.card-category-1,
+.card-category-2,
+.card-category-3,
+.card-category-4,
+.card-category-5,
+.card-category-6 {
+  font-family: sans-serif;
+  margin-bottom: 45px;
+  text-align: center;
+}
+.card-category-1 div,
+.card-category-2 div {
+  display: inline-block;
+}
+
+.card-category-1 > div,
+.card-category-2 > div:not(:last-child) {
+  margin: 10px 5px;
+  text-align: left;
+}
+
+/* Basic Card */
+.basic-card {
+  width: 300px;
+  position: relative;
+
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.basic-card .card-content {
+  padding: 30px;
+}
+
+.basic-card .card-title {
+  font-size: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.basic-card .card-text {
+  line-height: 1.6;
+}
+
+.basic-card .card-link {
+  padding: 25px;
+  width: -webkit-fill-available;
+}
+
+.basic-card .card-link a {
+  text-decoration: none;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.basic-card .card-link a:after {
+  top: 30px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  width: 0;
+
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.basic-card .card-link a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.basic-card-light {
+  border: 1px solid #eee;
+}
+
+.basic-card-light .card-title,
+.basic-card-light .card-link a {
+  color: #636363;
+}
+
+.basic-card-light .card-text {
+  color: #7b7b7b;
+}
+
+.basic-card-light .card-link {
+  border-top: 1px solid #eee;
+}
+
+.basic-card-light .card-link a:after {
+  background: #636363;
+}
+
+.dc1 {
+  margin: 0.6rem;
+}
+
+.DC-about {
+  margin: 5%;
+  display: flex;
+  gap: 2rem;
+  /* margin-right: 6rem; */
+  align-items: center;
+}
+
+.DC-about-text {
+  font-size: 1.3rem;
+}
+
+.DC-rest-text {
+  font-size: 1.3rem;
+  margin: 5%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .DC-about{
+    flex-direction: column;
+  }
+}

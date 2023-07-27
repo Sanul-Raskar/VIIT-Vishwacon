@@ -1,3 +1,42 @@
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --first-color: #3e449e;
+  --first-color-alt: #f0a3a0;
+  --first-container: #f1c2c0;
+  --title-color: #270c0c;
+  --text-color: #000;
+  --text-color-light: #270c0c;
+  --body-color: #ffebeaa3;
+  --container-color: #f1c2c0;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
 .main_title {
   text-align: center;
   margin-bottom: 40px;
@@ -175,6 +214,89 @@
     margin-right: auto;
   border-radius: 10px;
 }
+
+.feature-item {
+  transition: .5s;
+  margin: 2px;
+  text-decoration: none;
+ 
+}
+
+.feature-item:hover {
+  margin-top: -15px;
+  box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
+}
+/* card */
+.wrapper {
+  position: relative;
+  perspective: 40em;
+  display: grid;
+  transform-style: preserve-3d;
+}
+
+.card {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background: rgba(249, 198, 26, 0.88);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 900;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+.card .enclosed {
+  background: #000;
+  line-height: 1;
+  color: rgba(249, 198, 26, 1);
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  transform-origin: right center;
+}
+
+.wrapper:before {
+  --bw: 9px;
+  grid-area: 1 / 1;
+  content: '';
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin-top: calc(-1 * var(--bw));
+  margin-left: calc(-1 * var(--bw));
+  background: transparent;
+  transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+  pointer-events: none;
+  border: var(--bw) solid #000;
+  box-sizing: content-box;
+}
+
+
+.wrapper:hover > div,
+.wrapper:hover:before {
+  transform: none;
+}
+
+
+.wrapper > div,
+.wrapper:before {
+  will-change: transform;
+  transition: .3s transform cubic-bezier(.25,.46,.45,1);
+}
+
+
 
 /* Start Pages Area css
 ============================================================================================ */
@@ -429,4 +551,166 @@
   .upcoming_games .frequently_area {
     padding: 60px 0;
   }
+}
+
+/* Carousel container */
+.PriceBlocks-sliderContainer {
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Carousel animation */
+.PriceBlocks-slider {
+  display: flex;
+  animation: slide 10s infinite;
+}
+
+/* Slide animation keyframes */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+/* Slide container */
+.PriceBlock-container {
+  width: 100%;
+}
+
+/* Set the carousel items to be displayed side by side */
+.PriceBlock {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Optional: Add some spacing between slides */
+.PriceBlock-container + .PriceBlock-container {
+  margin-left: 10px;
+}
+
+/* Optional: Hide overflow to prevent content from showing outside the container */
+.PriceBlock-list {
+  overflow: hidden;
+}
+/* rgba(184, 190, 19, 0.438) */
+
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: rgba(180, 144, 169, 0.258);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border: 1em;
+  border-radius: 2rem;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--first-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 2.5vh;
+  color: #4e5052;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--first-color);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+  color: white;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: var(--first-color);
+  background-color: #f7f5ec;
 }
