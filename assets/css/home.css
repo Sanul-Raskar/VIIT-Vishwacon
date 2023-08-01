@@ -722,3 +722,55 @@ nav .navbar-nav li a {
 .blog{
   margin-bottom: 70px;
 }
+
+
+.container-box{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  width: 65%;
+  margin-inline: auto;
+  padding: 2em;
+}
+.container1{
+  width: 75%;
+  margin-inline: auto;
+  padding: 2em;
+}
+.container2{
+  width: 85%;
+  margin-inline: auto;
+  padding: 2em;
+}
+.table-box{
+  display:grid;
+  grid-template-columns: 30% 70%;  
+}
+.title-card{
+  font-size: 2em;
+  text-align: center;
+  font-weight: bolder;
+  color: #6a3232;
+}
+.title-card-1{
+  font-size: 4em;
+  text-align: center;
+  font-weight: bolder;
+  color: #6a3232;
+  padding-bottom: 1em;
+}
+
+@media(max-width:1060px){
+  .container-box{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width:790px){
+  .container-box{
+    grid-template-columns: 1fr ;
+  }
+}
+@media(max-width:340px){
+  .container-box{
+    grid-template-columns: 1fr ;
+  }
+}
