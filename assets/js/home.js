@@ -223,7 +223,7 @@ function validate() {
 }
 
 (function () {
-  const second = 500,
+  const second = 1000,
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
@@ -244,7 +244,7 @@ function validate() {
   }
   //end
 
-  const countDown = new Date(birthday).getTime(),
+  const countDown = new Date('11/25/2023').getTime(),
     x = setInterval(function () {
 
       const now = new Date().getTime(),
@@ -255,10 +255,10 @@ function validate() {
       let s = document.getElementById("seconds")
       if (d !== null && h !== null && m !== null && s !== null) {
 
-        d.innerText = Math.floor(distance / (day))
-        h.innerText = Math.floor((distance % (day)) / (hour))
-        m.innerText = Math.floor((distance % (hour)) / (minute))
-        s.innerText = Math.floor((distance % (minute)) / second);
+        d.innerText = formateNumber(Math.floor(distance / (day)))
+        h.innerText = formateNumber(Math.floor((distance % (day)) / (hour)))
+        m.innerText = formateNumber(Math.floor((distance % (hour)) / (minute)))
+        s.innerText = formateNumber(Math.floor((distance % (minute)) / second))
       }
 
       //do something later when date is reached
@@ -268,6 +268,13 @@ function validate() {
       //seconds
     }, 0)
 }());
+
+function formateNumber(n) {
+  if(n<10){
+    return '0'+n;
+  }
+  return n;
+}
 
 
 // pricing
