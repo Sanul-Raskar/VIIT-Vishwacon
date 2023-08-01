@@ -1,7 +1,7 @@
 sal();
 
-$(document).ready(function() {
-  $(window).scroll(function() {
+$(document).ready(function () {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
       $(".topButton").addClass("buttonDisplay");
     } else {
@@ -28,9 +28,9 @@ $(".owl-carousel").owlCarousel({
   nav: true,
   margin: 10,
   responsiveClass: true,
-  autoplay:true,
-  autoplayTimeout:3000,
-  autoplayHoverPause:true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
   responsive: {
     0: {
       items: 1
@@ -224,104 +224,110 @@ function validate() {
 
 (function () {
   const second = 500,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
 
   //I'm adding this section so I don't have to keep updating this pen every year :-)
   //remove this if you don't need it
   let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "09/30/",
-      birthday = dayMonth + yyyy;
-  
+    dd = String(today.getDate()).padStart(2, "0"),
+    mm = String(today.getMonth() + 1).padStart(2, "0"),
+    yyyy = today.getFullYear(),
+    nextYear = yyyy + 1,
+    dayMonth = "09/30/",
+    birthday = dayMonth + yyyy;
+
   today = mm + "/" + dd + "/" + yyyy;
   if (today > birthday) {
     birthday = dayMonth + nextYear;
   }
   //end
-  
+
   const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
+    x = setInterval(function () {
 
-        const now = new Date().getTime(),
-              distance = countDown - now;
+      const now = new Date().getTime(),
+        distance = countDown - now;
+      let d = document.getElementById("days");
+      let h = document.getElementById("hours")
+      let m = document.getElementById("minutes")
+      let s = document.getElementById("seconds")
+      if (d !== null && h !== null && m !== null && s !== null) {
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+        d.innerText = Math.floor(distance / (day))
+        h.innerText = Math.floor((distance % (day)) / (hour))
+        m.innerText = Math.floor((distance % (hour)) / (minute))
+        s.innerText = Math.floor((distance % (minute)) / second);
+      }
 
-        //do something later when date is reached
-        if (distance < 0) {
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
+      //do something later when date is reached
+      if (distance < 0) {
+        clearInterval(x);
+      }
+      //seconds
+    }, 0)
+}());
 
 
-  // pricing
+// pricing
 
-  var $carousel = $('.PriceBlocks-slider').flickity({
-    cellSelector: '.PriceBlock-container',
-    initialIndex: 2
-  });
-  
-  var flkty = $carousel.data('flickity');
-  
-  $carousel.on('staticClick.flickity', function(event, pointer, cellElement, cellIndex) {
-    if (typeof cellIndex == 'number') {
-      $carousel.flickity('selectCell', cellIndex);
-    }
-  });
-  
-  $carousel.on('select.flickity', function() {
-    flkty.getCellElements().forEach(function(cellElem) {
-      cellElem.classList['remove']('is-next');
-      cellElem.classList['remove']('is-previous');
-    });
-  
-    var previousSlide = flkty.slides[flkty.selectedIndex - 1];
-    var nextSlide = flkty.slides[flkty.selectedIndex + 1];
-  
-    nextSlide.getCellElements().forEach(function(cellElem) {
-      cellElem.classList['add']('is-next');
-    });
-    previousSlide.getCellElements().forEach(function(cellElem) {
-      cellElem.classList['add']('is-previous');
-    });
-  })
-  
-  function changeSlideClasses(slide, method, className) {
-    slide.flickity('getCellElements').forEach(function(cellElem) {
-      cellElem.classList[method](className);
-    });
+var $carousel = $('.PriceBlocks-slider').flickity({
+  cellSelector: '.PriceBlock-container',
+  initialIndex: 2
+});
+
+var flkty = $carousel.data('flickity');
+
+$carousel.on('staticClick.flickity', function (event, pointer, cellElement, cellIndex) {
+  if (typeof cellIndex == 'number') {
+    $carousel.flickity('selectCell', cellIndex);
   }
+});
+
+$carousel.on('select.flickity', function () {
+  flkty.getCellElements().forEach(function (cellElem) {
+    cellElem.classList['remove']('is-next');
+    cellElem.classList['remove']('is-previous');
+  });
+
+  var previousSlide = flkty.slides[flkty.selectedIndex - 1];
+  var nextSlide = flkty.slides[flkty.selectedIndex + 1];
+
+  nextSlide.getCellElements().forEach(function (cellElem) {
+    cellElem.classList['add']('is-next');
+  });
+  previousSlide.getCellElements().forEach(function (cellElem) {
+    cellElem.classList['add']('is-previous');
+  });
+})
+
+function changeSlideClasses(slide, method, className) {
+  slide.flickity('getCellElements').forEach(function (cellElem) {
+    cellElem.classList[method](className);
+  });
+}
 
 
-  /*==================== SHOW Events ====================*/
-const showEvents = (toggleId, navId) =>{
+/*==================== SHOW Events ====================*/
+const showEvents = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-  nav = document.getElementById(navId)
-  
+    nav = document.getElementById(navId)
+
   // Validate that variables exist
-  if(toggle && nav){
-      toggle.addEventListener('click', ()=>{
-          // We add the show-Events class to the div tag with the nav__Events class
-          nav.classList.toggle('show-Events')
-      })
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      // We add the show-Events class to the div tag with the nav__Events class
+      nav.classList.toggle('show-Events')
+    })
   }
 }
-showEvents('nav-toggle','nav-Events')
+showEvents('nav-toggle', 'nav-Events')
 
 /*==================== REMOVE Events MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
   const navEvents = document.getElementById('nav-Events')
   // When we click on each nav__link, we remove the show-Events class
   navEvents.classList.remove('show-Events')
@@ -331,28 +337,28 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+function scrollActive() {
   const scrollY = window.pageYOffset
 
-  sections.forEach(current =>{
-      const sectionHeight = current.offsetHeight
-      const sectionTop = current.offsetTop - 50;
-      sectionId = current.getAttribute('id')
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute('id')
 
-      if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-          document.querySelector('.nav__Events a[href*=' + sectionId + ']').classList.add('active-link')
-      }else{
-          document.querySelector('.nav__Events a[href*=' + sectionId + ']').classList.remove('active-link')
-      }
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav__Events a[href*=' + sectionId + ']').classList.add('active-link')
+    } else {
+      document.querySelector('.nav__Events a[href*=' + sectionId + ']').classList.remove('active-link')
+    }
   })
 }
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
-function scrollHeader(){
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
   const nav = document.getElementById('header')
   // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-  if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+  if (this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
@@ -362,15 +368,15 @@ function Feedback() {
 }
 
 
-/*==================== SHOW SCROLL TOP ====================*/ 
-function scrollTop(){
+/*==================== SHOW SCROLL TOP ====================*/
+function scrollTop() {
   const scrollTop = document.getElementById('scroll-top');
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+  if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
 
-/*==================== DARK LIGHT THEME ====================*/ 
+/*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'bx-sun'
@@ -385,9 +391,9 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moo
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
-// If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
