@@ -403,6 +403,9 @@ h1 {
   .main_title {
     margin-bottom: 50px;
   }
+  .about_us_image_box{
+    display: none;
+  }
 
   .about_us_area .about_us_image_box {
     display: none;
@@ -501,6 +504,9 @@ h1 {
 
   .section_gap_top {
     padding-top: 60px;
+  }
+  .about_us_image_box{
+    display: none;
   }
 
   .section_content {
