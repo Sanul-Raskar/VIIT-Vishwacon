@@ -502,6 +502,9 @@ h1 {
   .section_gap_top {
     padding-top: 60px;
   }
+  .about_us_image_box{
+    display: none;
+  }
 
   .section_content {
     padding: 35px 10px 35px 10px !important;
