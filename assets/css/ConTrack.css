@@ -13,9 +13,10 @@
   background: url('../img/business.jpg'); /* Replace with the path to your image */
   background-size: cover;
   background-position: center;
-  height: 100vh; /* 100% of viewport height */
+  height: 40vh; /* 100% of viewport height */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* Heading styles */
@@ -24,7 +25,7 @@
   font-size: 48px;
   font-weight: bold;
   line-height: 1.2;
-  margin-left: 590px;
+  /* margin-left: 590px; */
   font-family:'Righteous', cursive /* Adjust this value to add space between the image and text */
 }
 /* Container 1 */
