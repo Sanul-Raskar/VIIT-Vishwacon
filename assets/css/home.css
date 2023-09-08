@@ -50,7 +50,7 @@ nav .navbar-nav li a {
 }
 
 .title {
-  margin-top: 10%;
+  margin-top: 6%;
 }
 
 .banner {
@@ -67,7 +67,7 @@ nav .navbar-nav li a {
     ),
     url("../img/technology.jpg");
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: absolute;
@@ -772,5 +772,10 @@ nav .navbar-nav li a {
 @media(max-width:340px){
   .container-box{
     grid-template-columns: 1fr ;
+  }
+}
+@media(max-width:790px) {
+  .home-viit {
+    flex-direction: column;
   }
 }
