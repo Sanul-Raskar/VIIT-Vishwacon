@@ -31,7 +31,7 @@
   <div id="navbar"></div>
 
   <section class="banner"
-    style="background:linear-gradient(90deg,rgba(0, 0, 0,0.7),rgba(60, 51, 141,0.5)),url('./assets/img/contactUs.webp'); background-size: cover; height: 100vh;">
+    style="background:linear-gradient(90deg,rgba(0, 0, 0,0.7),rgba(60, 51, 141,0.5)),url('./assets/img/contactUs.webp'); background-size: cover; height: 40vh;">
     <h1 style="color:white;line-height: 350px;text-align: center;">
       Registration
     </h1>
@@ -328,15 +328,24 @@
 
           <br />
           <br /><br /> -->
-
-          <p style="font-size: 1.5rem; text-align:initial;">
-            Microsoft CMT for Submission of a complete paper:
-            <br>
-
-            <a href="https://cmt3.research.microsoft.com/VISHWACON2023" target="_blank"
-              class="btn btn-primary buttonTheme" style="font-size: 1.5rem; text-align:initial; margin-top: 0.8rem;">
-              Submit Full Paper</a>
-          </p>
+<div class="Paper-Submission" style="display: flex; align-items:center; justify-content:space-between; margin:2rem; margin-top:3rem">
+  
+  <p class="text-justify" style="font-size: 1.5rem; text-align:initial; margin:0;">
+    Microsoft CMT link for Submission of full paper:
+    <br>
+    
+  </p>
+  <a href="https://cmt3.research.microsoft.com/VISHWACON2023" target="_blank"
+  class="btn btn-primary buttonTheme" style="font-size: 1.5rem; text-align:initial; margin-top: 0.8rem;">
+  Submit Full Paper</a>
+</div>
+<style>
+  @media only screen and (max-width: 600px) {
+    .Paper-Submission{
+      flex-direction: column;
+    }
+  }
+</style>
         </div>
 
           <!--<ul>
