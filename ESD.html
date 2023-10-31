@@ -54,7 +54,7 @@
           <div class="text-center" style="font-size: 1.5rem; color: rgb(0, 0, 0);">
 
             <h1 style="font-size: 2rem; font-weight: bold;">ENERGY AND SUSTAINABILITY DEVELOPMENT CONCLAVE</h2>
-              <h4>(A Joint Collaboration of VIIT AND MASMA)</h4>
+              <h4>(A Joint Collaboration of VIIT AND THE MASMA)</h4>
 
           </div>
           <img class="logos" src="./assets/img/masma.png"
@@ -71,6 +71,25 @@
 
           <div class="main_title">
             <h2 style="text-align: center;">ENERGY AND SUSTAINABILITY DEVELOPMENT CONCLAVE</h2>
+            <button id="downloadBtn" class="btn">
+              Brochure
+          </button>
+          
+          <script>
+              const downloadBtn = document.getElementById("downloadBtn");
+          
+              downloadBtn.addEventListener("click", () => {
+                  const brochureUrl = "./downloads/Brochure_ESD.pdf";
+                  const a = document.createElement("a");
+                  a.href = brochureUrl;
+                  a.download = "Brochure_Vishwacon_2023_ESD.pdf";
+                  a.style.display = "none";
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+              });
+          </script>
+          <br>
             <br>
             <p class="text-justify">
               Welcome to the Energy and Sustainable Development Conclave! This is a joint collaborative
@@ -101,8 +120,29 @@
               of November 2023 at VIIT, Pune campus and 3 winners will be declared on 24th Nov 2023.
               Details of the awards will be announced separately.
             </p>
-            <br><br>
+            <br>
+            <div style="text-align: left; max-width: 600px; padding: 20px; ">
 
+              <h4>Energy and Sustainable Development Conclave 2023 🌐</h4>
+              
+              <p><strong>📅 Mark your calendars for November 24-25, 2023!</strong></p>
+              
+              <p>Welcome to the Energy and Sustainable Development Conclave!</p>
+              
+              <p><strong>✨Join us in exploring groundbreaking solutions, sharing insights, and shaping the future of sustainable energy.
+                Together, we can drive positive change towards a greener and more sustainable world.</strong></p>
+                
+                <p><strong>📍Location: <a href="#">VIIT, Pune</a></strong></p>
+                
+            <p><strong>📌Link for Poster Competition And Exhibition For Energy And Sustainable Development -
+              <a href="https://forms.gle/euzGrkXfkcExrLdh7">https://forms.gle/euzGrkXfkcExrLdh7</a></strong></p>
+              
+              <p><strong>📌Link for Logo Competition And Exhibition For Energy And Sustainable Development -
+                <a href="https://forms.gle/NhiXmVW44FqHrJPW6">https://forms.gle/NhiXmVW44FqHrJPW6</a></strong></p>
+                
+                <p>See you there! 🚀</p>
+                
+              </div>
             <div style="text-align: left;">
               <h4>
                 Following are the five criteria based on which all the posters in the competition will be
