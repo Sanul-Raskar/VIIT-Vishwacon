@@ -33,15 +33,15 @@ $(".owl-carousel").owlCarousel({
   autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1
+      items: 1,
     },
     600: {
-      items: 2
+      items: 2,
     },
     1000: {
-      items: 3
-    }
-  }
+      items: 3,
+    },
+  },
 });
 
 function dynamicDropdown(selected) {
@@ -52,35 +52,35 @@ function dynamicDropdown(selected) {
       "Internet Of Things",
       "Software Engineering",
       "Networking & Cloud Computing",
-      "Artificial Intelligence & Machine Learning"
+      "Artificial Intelligence & Machine Learning",
     ],
     it: [
       "Cloud Computing",
       "Data Mining & Information Retrieval",
       "Mobile Computing & Wireless Communication",
-      "Network & Cyber Security"
+      "Network & Cyber Security",
     ],
     mech: [
       "Automation & Robotics",
       "Design Engineering",
       "Thermal & Fluid Science",
       "Manufacturing & Material Science",
-      "Mechatronics"
+      "Mechatronics",
     ],
     civil: [
       "Green Construction Materials & Advances in Construction Techniques",
       "Recent Developments in Town Planning with respect to Smart City",
       "Recent Trends in Structural Engineering and Concrete Technology",
       "Application of Remote Sensing and GIS in Civil Engineering",
-      "New Technologies, Methods & Techniques in Civil Engineering"
+      "New Technologies, Methods & Techniques in Civil Engineering",
     ],
     entc: [
       "Embedded & VLSI Design",
       "Communication & Networking",
       "Machine Learning",
       "Instrumentation Systems",
-      "Power & Renewable Energy Systems"
-    ]
+      "Power & Renewable Energy Systems",
+    ],
   };
 
   switch (selected) {
@@ -244,21 +244,19 @@ function validate() {
   }
   //end
 
-  const countDown = new Date('11/25/2023').getTime(),
+  const countDown = new Date("11/29/2024").getTime(),
     x = setInterval(function () {
-
       const now = new Date().getTime(),
         distance = countDown - now;
       let d = document.getElementById("days");
-      let h = document.getElementById("hours")
-      let m = document.getElementById("minutes")
-      let s = document.getElementById("seconds")
+      let h = document.getElementById("hours");
+      let m = document.getElementById("minutes");
+      let s = document.getElementById("seconds");
       if (d !== null && h !== null && m !== null && s !== null) {
-
-        d.innerText = formateNumber(Math.floor(distance / (day)))
-        h.innerText = formateNumber(Math.floor((distance % (day)) / (hour)))
-        m.innerText = formateNumber(Math.floor((distance % (hour)) / (minute)))
-        s.innerText = formateNumber(Math.floor((distance % (minute)) / second))
+        d.innerText = formateNumber(Math.floor(distance / day));
+        h.innerText = formateNumber(Math.floor((distance % day) / hour));
+        m.innerText = formateNumber(Math.floor((distance % hour) / minute));
+        s.innerText = formateNumber(Math.floor((distance % minute) / second));
       }
 
       //do something later when date is reached
@@ -266,166 +264,181 @@ function validate() {
         clearInterval(x);
       }
       //seconds
-    }, 0)
-}());
+    }, 0);
+})();
 
 function formateNumber(n) {
-  if(n<10){
-    return '0'+n;
+  if (n < 10) {
+    return "0" + n;
   }
   return n;
 }
 
-
 // pricing
 
-var $carousel = $('.PriceBlocks-slider').flickity({
-  cellSelector: '.PriceBlock-container',
-  initialIndex: 2
+var $carousel = $(".PriceBlocks-slider").flickity({
+  cellSelector: ".PriceBlock-container",
+  initialIndex: 2,
 });
 
-var flkty = $carousel.data('flickity');
+var flkty = $carousel.data("flickity");
 
-$carousel.on('staticClick.flickity', function (event, pointer, cellElement, cellIndex) {
-  if (typeof cellIndex == 'number') {
-    $carousel.flickity('selectCell', cellIndex);
+$carousel.on(
+  "staticClick.flickity",
+  function (event, pointer, cellElement, cellIndex) {
+    if (typeof cellIndex == "number") {
+      $carousel.flickity("selectCell", cellIndex);
+    }
   }
-});
+);
 
-$carousel.on('select.flickity', function () {
+$carousel.on("select.flickity", function () {
   flkty.getCellElements().forEach(function (cellElem) {
-    cellElem.classList['remove']('is-next');
-    cellElem.classList['remove']('is-previous');
+    cellElem.classList["remove"]("is-next");
+    cellElem.classList["remove"]("is-previous");
   });
 
   var previousSlide = flkty.slides[flkty.selectedIndex - 1];
   var nextSlide = flkty.slides[flkty.selectedIndex + 1];
 
   nextSlide.getCellElements().forEach(function (cellElem) {
-    cellElem.classList['add']('is-next');
+    cellElem.classList["add"]("is-next");
   });
   previousSlide.getCellElements().forEach(function (cellElem) {
-    cellElem.classList['add']('is-previous');
+    cellElem.classList["add"]("is-previous");
   });
-})
+});
 
 function changeSlideClasses(slide, method, className) {
-  slide.flickity('getCellElements').forEach(function (cellElem) {
+  slide.flickity("getCellElements").forEach(function (cellElem) {
     cellElem.classList[method](className);
   });
 }
 
-
 /*==================== SHOW Events ====================*/
 const showEvents = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+    nav = document.getElementById(navId);
 
   // Validate that variables exist
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener("click", () => {
       // We add the show-Events class to the div tag with the nav__Events class
-      nav.classList.toggle('show-Events')
-    })
+      nav.classList.toggle("show-Events");
+    });
   }
-}
-showEvents('nav-toggle', 'nav-Events')
+};
+showEvents("nav-toggle", "nav-Events");
 
 /*==================== REMOVE Events MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll(".nav__link");
 
 function linkAction() {
-  const navEvents = document.getElementById('nav-Events')
+  const navEvents = document.getElementById("nav-Events");
   // When we click on each nav__link, we remove the show-Events class
-  navEvents.classList.remove('show-Events')
+  navEvents.classList.remove("show-Events");
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
-  const scrollY = window.pageYOffset
+  const scrollY = window.pageYOffset;
 
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute('id')
+    sectionId = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document.querySelector('.nav__Events a[href*=' + sectionId + ']').classList.add('active-link')
+      document
+        .querySelector(".nav__Events a[href*=" + sectionId + "]")
+        .classList.add("active-link");
     } else {
-      document.querySelector('.nav__Events a[href*=' + sectionId + ']').classList.remove('active-link')
+      document
+        .querySelector(".nav__Events a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
     }
-  })
+  });
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener("scroll", scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
-  const nav = document.getElementById('header')
+  const nav = document.getElementById("header");
   // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-  if (this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+  if (this.scrollY >= 200) nav.classList.add("scroll-header");
+  else nav.classList.remove("scroll-header");
 }
-window.addEventListener('scroll', scrollHeader)
+window.addEventListener("scroll", scrollHeader);
 
 function Feedback() {
-  parent.location = "https://forms.gle/mp8rS8h217wmxd8o7"
-  console.log("location")
+  parent.location = "https://forms.gle/mp8rS8h217wmxd8o7";
+  console.log("location");
 }
-
 
 /*==================== SHOW SCROLL TOP ====================*/
 function scrollTop() {
-  const scrollTop = document.getElementById('scroll-top');
+  const scrollTop = document.getElementById("scroll-top");
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+  if (this.scrollY >= 560) scrollTop.classList.add("show-scroll");
+  else scrollTop.classList.remove("show-scroll");
 }
-window.addEventListener('scroll', scrollTop)
+window.addEventListener("scroll", scrollTop);
 
 /*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'bx-sun'
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "bx-sun";
 
 // Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
 
 // We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-moon' : 'bx-sun'
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? "dark" : "light";
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
 
 // We validate if the user previously chose a topic
 if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme)
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === "bx-moon" ? "add" : "remove"](
+    iconTheme
+  );
 }
 
 // Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
+themeButton.addEventListener("click", () => {
   // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme)
-  themeButton.classList.toggle(iconTheme)
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
   // We save the theme and the current icon that the user chose
-  localStorage.setItem('selected-theme', getCurrentTheme())
-  localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  localStorage.setItem("selected-theme", getCurrentTheme());
+  localStorage.setItem("selected-icon", getCurrentIcon());
+});
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
 const sr = ScrollReveal({
-  origin: 'top',
-  distance: '30px',
+  origin: "top",
+  distance: "30px",
   duration: 2000,
-  reset: true
+  reset: true,
 });
 
-sr.reveal(`.home__data, .home__img,
+sr.reveal(
+  `.home__data, .home__img,
           .about__data, .about__img,
           .Team__content, .Events__content,
           .app__data, .app__img,
           .contact__data, .contact__button,
-          .footer__content`, {
-  interval: 200
-})
+          .footer__content`,
+  {
+    interval: 200,
+  }
+);
