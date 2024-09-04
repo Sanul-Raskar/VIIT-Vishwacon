@@ -244,7 +244,7 @@ function validate() {
   }
   //end
 
-  const countDown = new Date("11/29/2024").getTime(),
+  const countDown = new Date("11/22/2024").getTime(),
     x = setInterval(function () {
       const now = new Date().getTime(),
         distance = countDown - now;
