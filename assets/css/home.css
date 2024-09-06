@@ -817,3 +817,6 @@ nav .navbar-nav li a {
     font-size: 0.4rem;
   } */
 }
+.datesCenter{
+  justify-content:center;
+}
